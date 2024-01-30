@@ -1,0 +1,6 @@
+version: '3'
+services:
+  poseidonstrident:
+    build: .
+    ports:
+      - "80:80"
