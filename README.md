@@ -56,7 +56,7 @@ You can see the results of the analysis in the terminal or in the log file
 
 ## Features
 
-Poseidon's Trident offers a comprehensive solution for cybersecurity, with the following features:
+**Poseidon's Trident** offers a comprehensive solution for cybersecurity, with the following features:
 
 - Threat Detection: Detect and analyze threats using various techniques, such as:
   - Firewall: Filter incoming and outgoing network traffic based on rules and policies.
