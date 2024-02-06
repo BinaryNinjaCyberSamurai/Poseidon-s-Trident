@@ -1,5 +1,4 @@
-# Poseidon's Trident <img src="https://github.com/Rizwans-github/Poseidon-s-Trident/assets/141806496/c050fe7b-2c2c-4471-b640-8271ca6d3fb5" alt="Shield" width="35" height="35" />
-
+# Poseidon's Trident 🔱
 
 **Poseidon’s Trident** is a triad of cybersecurity - threat detection, protection, and response. Harness the power of the sea god’s trident to secure your network and cloud infrastructure.
 
