@@ -89,4 +89,5 @@ We welcome contributions from anyone who is interested in improving **Poseidon's
 Please follow the coding standards and conventions used in the project. Please also respect the code of conduct and the license of the project. For more details, please see the [CONTRIBUTING.md](https://github.com/BinaryNinjaCyberSamurai/Poseidon-s-Trident/blob/main/CONTRIBUTING.md) file.
 
 ## License
+
 **Poseidon's Trident** is licensed under the MIT License. See the [License](https://github.com/BinaryNinjaCyberSamurai/Poseidon-s-Trident/blob/main/LICENSE) file for more information.
