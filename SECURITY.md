@@ -54,7 +54,9 @@ Patch Management: Stay up-to-date with security patches.
 Security Awareness Training: Educate team members about security best practices.
 
 *Contributing*
+
 We welcome contributions from the security community. Please follow our CONTRIBUTING.md guidelines.
 
-License*
+*License*
+
 Poseidon’s Trident is released under the MIT License.
