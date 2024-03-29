@@ -1,4 +1,4 @@
-#*Poseidon’s Trident Security Guidelines*#
+##*Poseidon’s Trident Security Guidelines*##
 
 1. Table of Contents
 2. Introduction
