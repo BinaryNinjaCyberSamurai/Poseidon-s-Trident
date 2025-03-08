@@ -88,3 +88,68 @@
 2025-03-09 01:43:32,672 - Failed login attempt: adming
 2025-03-09 01:43:37,313 - User admin logged in.
 2025-03-09 01:43:55,470 - User admin logged in.
+2025-03-09 01:46:39,270 - User admin logged in.
+2025-03-09 03:04:30,792 - User admin logged in.
+2025-03-09 03:07:00,647 - User admin logged in.
+2025-03-09 03:07:00,670 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:09:52,513 - New user registered: abc
+2025-03-09 03:09:59,225 - User abc logged in.
+2025-03-09 03:09:59,239 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:10:08,803 - User abc logged in.
+2025-03-09 03:10:08,813 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:10:30,602 - User admin logged in.
+2025-03-09 03:10:30,629 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:10:51,130 - User admin logged in.
+2025-03-09 03:10:51,159 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:11:07,242 - Failed login attempt: abc
+2025-03-09 03:11:11,758 - Failed login attempt: abc
+2025-03-09 03:11:22,082 - New user registered: abc
+2025-03-09 03:11:33,665 - User abc logged in.
+2025-03-09 03:11:33,674 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:12:58,878 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:13:05,144 - Password recovery email sent to admin.
+2025-03-09 03:18:28,282 - User admin logged in.
+2025-03-09 03:18:28,331 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:24:49,441 - User admin logged in.
+2025-03-09 03:24:49,460 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:25:12,368 - User admin changed their password.
+2025-03-09 03:25:22,029 - Failed login attempt: admin
+2025-03-09 03:25:28,055 - User admin logged in.
+2025-03-09 03:25:28,061 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:25:48,023 - User admin logged in.
+2025-03-09 03:25:48,046 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:27:06,560 - User admin logged in.
+2025-03-09 03:27:06,574 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:28:32,532 - User admin logged in.
+2025-03-09 03:28:32,575 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:32:48,149 - User admin logged in.
+2025-03-09 03:32:48,172 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:34:26,152 - User admin logged in.
+2025-03-09 03:34:26,177 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:38:41,513 - User admin logged in.
+2025-03-09 03:38:41,540 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:40:29,914 - Failed login attempt: Username
+2025-03-09 03:46:27,315 - Failed login attempt: Username
+2025-03-09 03:46:36,788 - User admin logged in.
+2025-03-09 03:46:36,818 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:48:20,337 - Failed login attempt: 
+2025-03-09 03:48:32,012 - User admin logged in.
+2025-03-09 03:48:32,063 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:48:58,539 - User admin logged in.
+2025-03-09 03:48:58,553 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:51:16,162 - Failed login attempt: Username
+2025-03-09 03:51:22,283 - User admin logged in.
+2025-03-09 03:51:22,317 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:52:00,570 - User admin logged in.
+2025-03-09 03:52:00,592 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:54:20,720 - User admin logged in.
+2025-03-09 03:54:20,746 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:02:41,051 - User admin logged in.
+2025-03-09 04:02:41,067 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:03:21,095 - User admin logged in.
+2025-03-09 04:03:21,111 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:05:10,054 - User admin logged in.
+2025-03-09 04:05:10,071 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:05:38,432 - Failed login attempt: 
+2025-03-09 04:05:50,203 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:05:53,097 - Password recovery email sent to admin.
