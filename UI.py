@@ -462,7 +462,7 @@ def make_pill_button(button):
     button.config(compound=tk.CENTER, padx=10, pady=5)
     button.config(font=("Arial", 10, "bold"))
     button.config(highlightbackground="#FFD700", highlightcolor="#FFD700", highlightthickness=2)
-    button.config(width=20, height=2, borderwidth=2, relief=tk.RAISED)
+    button.config(width=15, height=1, borderwidth=2, relief=tk.RAISED)
 
 def make_pill_icon_button(button):
     button.config(borderwidth=0, highlightthickness=0, relief=tk.FLAT, bg="#FFD700", fg="#000000")
@@ -499,7 +499,7 @@ def on_focusout(event, entry, placeholder, show=""):
         entry.config(fg="grey", show=show)
 
 def start_ui():
-    global root, login_frame, dashboard_frame, entry_username, entry_password, status_text
+    global root, login_frame, dashboard_frame, entry_username, entry_password, status_text, dark_mode_var
     root = tk.Tk()
     root.title("Poseidon's Trident - Security Dashboard")
     root.geometry("500x400")
@@ -508,7 +508,7 @@ def start_ui():
 
     # Load and resize Trident logo
     trident_logo = PhotoImage(file="trident.png")
-    trident_logo = trident_logo.subsample(6, 6)  # Reduce size to one-fourth
+    trident_logo = trident_logo.subsample(6, 6)  # Reduce size to one-sixth
 
     # Login Frame
     login_frame = tk.Frame(root, bg="#001f3f")
@@ -521,22 +521,24 @@ def start_ui():
     login_heading = tk.Label(login_frame, text="Welcome to Poseidon's Trident", font=("Arial", 20, "bold"), bg="#001f3f", fg="#7FDBFF")
     login_heading.pack(pady=10)
     
-    entry_username = tk.Entry(login_frame, bg="#001f3f", fg="grey", insertbackground="#7FDBFF")
+    entry_username = tk.Entry(login_frame, bg="#001f3f", fg="grey", insertbackground="#7FDBFF", justify='center')
     entry_username.insert(0, "Username")
     entry_username.bind("<FocusIn>", lambda event: on_entry_click(event, entry_username, "Username"))
     entry_username.bind("<FocusOut>", lambda event: on_focusout(event, entry_username, "Username"))
-    entry_username.pack()
+    entry_username.pack(pady=5)
     
     password_frame = tk.Frame(login_frame, bg="#001f3f")
-    entry_password = tk.Entry(password_frame, bg="#001f3f", fg="grey", insertbackground="#7FDBFF")
+    entry_password = tk.Entry(password_frame, bg="#001f3f", fg="grey", insertbackground="#7FDBFF", justify='center')
     entry_password.insert(0, "Password")
     entry_password.bind("<FocusIn>", lambda event: on_entry_click(event, entry_password, "Password", show="*"))
     entry_password.bind("<FocusOut>", lambda event: on_focusout(event, entry_password, "Password"))
-    entry_password.pack(side=tk.LEFT)
-    eye_button = tk.Button(password_frame, text="👁", command=toggle_password, bg="#001f3f", fg="#7FDBFF")
-    eye_button.pack(side=tk.LEFT)
-    apply_interactive_effects(eye_button)
-    make_pill_icon_button(eye_button)
+    entry_password.pack(side=tk.LEFT, pady=5)
+    
+    eye_label = tk.Label(password_frame, text="👁️", bg="#001f3f", fg="#7FDBFF", cursor="hand2", font=("Arial", 12))
+    eye_label.pack(side=tk.LEFT, padx=1)
+    eye_label.bind("<Button-1>", lambda e: toggle_password())
+    apply_interactive_effects(eye_label)
+    
     password_frame.pack()
     
     login_button = tk.Button(login_frame, text="Login", command=login, bg="#001f3f", fg="#7FDBFF")
@@ -544,65 +546,63 @@ def start_ui():
     apply_interactive_effects(login_button)
     make_pill_button(login_button)
     
-    register_button = tk.Button(login_frame, text="Register", command=register, bg="#001f3f", fg="#7FDBFF")
-    register_button.pack(pady=5)
-    apply_interactive_effects(register_button)
-    make_pill_button(register_button)
+    register_link = tk.Label(login_frame, text="Register", fg="#7FDBFF", bg="#001f3f", cursor="hand2", font=("Arial", 10, "underline"))
+    register_link.pack(pady=5)
+    register_link.bind("<Button-1>", lambda e: register())
     
-    recover_button = tk.Button(login_frame, text="Recover Password", command=recover_password, bg="#001f3f", fg="#7FDBFF")
-    recover_button.pack(pady=5)
-    apply_interactive_effects(recover_button)
-    make_pill_button(recover_button)
+    recover_link = tk.Label(login_frame, text="Recover Password", fg="#7FDBFF", bg="#001f3f", cursor="hand2", font=("Arial", 10, "underline"))
+    recover_link.pack(pady=5)
+    recover_link.bind("<Button-1>", lambda e: recover_password())
     
-    dark_mode_button = tk.Button(login_frame, text="Toggle Dark Mode", command=toggle_dark_mode, bg="#001f3f", fg="#7FDBFF")
-    dark_mode_button.pack()
-    apply_interactive_effects(dark_mode_button)
-    make_pill_button(dark_mode_button)
+    dark_mode_var = tk.IntVar()
+    dark_mode_toggle = tk.Checkbutton(login_frame, text="Dark Mode", variable=dark_mode_var, command=toggle_dark_mode, bg="#001f3f", fg="#7FDBFF", selectcolor="#001f3f")
+    dark_mode_toggle.pack(pady=5)
+    apply_interactive_effects(dark_mode_toggle)
 
     # Dashboard Frame
     dashboard_frame = tk.Frame(root, bg="#001f3f")
     firewall_button = tk.Button(dashboard_frame, text="Firewall Management", command=open_firewall_management, bg="#001f3f", fg="#7FDBFF")
-    firewall_button.pack()
+    firewall_button.pack(pady=5)
     apply_interactive_effects(firewall_button)
     make_pill_button(firewall_button)
     
     intrusion_button = tk.Button(dashboard_frame, text="Intrusion Detection", command=open_intrusion_detection, bg="#001f3f", fg="#7FDBFF")
-    intrusion_button.pack()
+    intrusion_button.pack(pady=5)
     apply_interactive_effects(intrusion_button)
     make_pill_button(intrusion_button)
     
     logs_button = tk.Button(dashboard_frame, text="Real-Time Logs", command=real_time_logs, bg="#001f3f", fg="#7FDBFF")
-    logs_button.pack()
+    logs_button.pack(pady=5)
     apply_interactive_effects(logs_button)
     make_pill_button(logs_button)
     
     change_password_button = tk.Button(dashboard_frame, text="Change Password", command=change_password, bg="#001f3f", fg="#7FDBFF")
-    change_password_button.pack()
+    change_password_button.pack(pady=5)
     apply_interactive_effects(change_password_button)
     make_pill_button(change_password_button)
     
     manage_roles_button = tk.Button(dashboard_frame, text="Manage User Roles", command=manage_roles, bg="#001f3f", fg="#7FDBFF")
-    manage_roles_button.pack()
+    manage_roles_button.pack(pady=5)
     apply_interactive_effects(manage_roles_button)
     make_pill_button(manage_roles_button)
     
     activity_dashboard_button = tk.Button(dashboard_frame, text="Activity Dashboard", command=show_activity_dashboard, bg="#001f3f", fg="#7FDBFF")
-    activity_dashboard_button.pack()
+    activity_dashboard_button.pack(pady=5)
     apply_interactive_effects(activity_dashboard_button)
     make_pill_button(activity_dashboard_button)
     
     health_check_button = tk.Button(dashboard_frame, text="System Health Check", command=system_health_check, bg="#001f3f", fg="#7FDBFF")
-    health_check_button.pack()
+    health_check_button.pack(pady=5)
     apply_interactive_effects(health_check_button)
     make_pill_button(health_check_button)
     
     logout_button = tk.Button(dashboard_frame, text="Logout", command=logout, bg="#001f3f", fg="#7FDBFF")
-    logout_button.pack()
+    logout_button.pack(pady=5)
     apply_interactive_effects(logout_button)
     make_pill_button(logout_button)
     
     dark_mode_dashboard_button = tk.Button(dashboard_frame, text="Toggle Dark Mode", command=toggle_dark_mode, bg="#001f3f", fg="#7FDBFF")
-    dark_mode_dashboard_button.pack()
+    dark_mode_dashboard_button.pack(pady=5)
     apply_interactive_effects(dark_mode_dashboard_button)
     make_pill_button(dark_mode_dashboard_button)
 

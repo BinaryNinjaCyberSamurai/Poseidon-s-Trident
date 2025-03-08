@@ -153,3 +153,10 @@
 2025-03-09 04:05:38,432 - Failed login attempt: 
 2025-03-09 04:05:50,203 - Failed to send email: [Errno 11001] getaddrinfo failed
 2025-03-09 04:05:53,097 - Password recovery email sent to admin.
+2025-03-09 04:40:03,549 - User admin logged in.
+2025-03-09 04:40:03,591 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:40:34,325 - User admin logged in.
+2025-03-09 04:40:34,337 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:40:40,847 - Intrusion detected: Suspicious activity detected from IP: 192.168.1.10
+2025-03-09 04:51:43,195 - User admin logged in.
+2025-03-09 04:51:43,217 - Failed to send email: [Errno 11001] getaddrinfo failed
