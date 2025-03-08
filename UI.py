@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox, scrolledtext
+from tkinter import messagebox, scrolledtext, PhotoImage
 from firewall import Firewall
 import hashlib
 import logging
@@ -506,9 +506,17 @@ def start_ui():
 
     apply_deep_ocean_theme()  # Apply the deep ocean theme
 
+    # Load and resize Trident logo
+    trident_logo = PhotoImage(file="trident.png")
+    trident_logo = trident_logo.subsample(6, 6)  # Reduce size to one-fourth
+
     # Login Frame
     login_frame = tk.Frame(root, bg="#001f3f")
     login_frame.pack(pady=50)
+    
+    logo_label = tk.Label(login_frame, image=trident_logo, bg="#001f3f")
+    logo_label.image = trident_logo  # Keep a reference to avoid garbage collection
+    logo_label.pack(pady=10)
     
     login_heading = tk.Label(login_frame, text="Welcome to Poseidon's Trident", font=("Arial", 20, "bold"), bg="#001f3f", fg="#7FDBFF")
     login_heading.pack(pady=10)
