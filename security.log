@@ -160,3 +160,4 @@
 2025-03-09 04:40:40,847 - Intrusion detected: Suspicious activity detected from IP: 192.168.1.10
 2025-03-09 04:51:43,195 - User admin logged in.
 2025-03-09 04:51:43,217 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:55:35,535 - New user registered: mrizwan
