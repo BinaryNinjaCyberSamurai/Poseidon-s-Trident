@@ -28,5 +28,4 @@ def register():
     return jsonify({"message": "Registration successful"})
 
 if __name__ == '__main__':
-    app.run(debug=True)    cd frontend
-    npm run build
+    app.run(debug=True)    
