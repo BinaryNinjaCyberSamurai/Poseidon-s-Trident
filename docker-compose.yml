@@ -1,6 +1,21 @@
 version: '3'
 services:
-  poseidonstrident:
+  webserver:
     build: .
     ports:
       - "80:80"
+    networks:
+      - my_network
+    environment:
+      - SECRET_KEY=mysecretkey
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  my_network:
+    driver: bridge
+    aliases:
+      - webserver

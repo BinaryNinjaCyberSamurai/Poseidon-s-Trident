@@ -4,14 +4,26 @@ FROM python:3.8-slim
 # Set the working directory in the container to /app
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-ADD . /app
+# Copy only necessary files (using .dockerignore)
+COPY . /app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 80 available to the world outside this container
+# Separate build and runtime stages for efficiency
+# Build stage
+FROM python:3.8-slim AS builder
+WORKDIR /build
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Runtime stage
+FROM python:3.8-slim
+WORKDIR /app
+COPY --from=builder /build /app
+
+# Expose port 80
 EXPOSE 80
 
-# Run PoseidonsTrident_Cybersecurity.py when the container launches
+# Run your cybersecurity software
 CMD ["python", "PoseidonsTrident_Cybersecurity.py"]
