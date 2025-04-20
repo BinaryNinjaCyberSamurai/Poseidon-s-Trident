@@ -1,0 +1,167 @@
+2025-03-08 22:38:23,345 - User admin logged in successfully.
+2025-03-08 22:38:32,536 - Intrusion detected: Suspicious activity detected from IP: 192.168.1.10
+2025-03-08 22:40:19,684 - Failed login attempt for username: admin
+2025-03-08 22:40:27,376 - User admin logged in successfully.
+2025-03-08 22:40:31,831 - Firewall rule added: asdf
+2025-03-08 22:42:58,890 - User admin logged in successfully.
+2025-03-08 22:43:02,477 - Firewall rule added: as
+2025-03-08 22:43:21,580 - User admin logged in successfully.
+2025-03-08 22:43:31,462 - Intrusion detected: Suspicious activity detected from IP: 192.168.1.10
+2025-03-08 22:48:47,222 - User admin logged in successfully.
+2025-03-08 22:50:12,150 - Failed login attempt: admin
+2025-03-08 22:50:19,454 - User admin logged in.
+2025-03-08 22:51:29,181 - User admin logged in.
+2025-03-08 23:02:26,240 - User admin logged in.
+2025-03-08 23:02:32,332 - User admin logged in.
+2025-03-08 23:02:54,820 - User admin logged in.
+2025-03-08 23:03:15,703 - User admin logged in.
+2025-03-08 23:03:27,369 - User admin logged in.
+2025-03-08 23:05:00,068 - User admin logged in.
+2025-03-08 23:06:14,401 - Failed login attempt: username
+2025-03-08 23:06:24,498 - User admin logged in.
+2025-03-08 23:16:11,352 - User admin logged in.
+2025-03-08 23:16:29,813 - Intrusion detected: Suspicious activity detected from IP: 192.168.1.10
+2025-03-08 23:17:14,672 - User admin logged in.
+2025-03-08 23:21:53,467 - Failed login attempt: asdf
+2025-03-08 23:23:50,436 - User admin logged in.
+2025-03-08 23:26:10,561 - User admin logged in.
+2025-03-08 23:30:58,949 - User admin logged in.
+2025-03-08 23:31:26,030 - User admin logged in.
+2025-03-08 23:33:47,779 - User admin logged in.
+2025-03-08 23:37:41,406 - User admin logged in.
+2025-03-08 23:41:31,415 - User admin logged in.
+2025-03-08 23:44:15,320 - Failed login attempt: asdf
+2025-03-08 23:56:02,789 - User admin logged in.
+2025-03-08 23:59:18,037 - Failed login attempt: admin
+2025-03-09 00:01:27,067 - Failed login attempt: admin
+2025-03-09 00:03:02,239 - User admin logged in.
+2025-03-09 00:04:04,379 - User admin logged in.
+2025-03-09 00:10:18,639 - User admin logged in.
+2025-03-09 00:10:59,159 - User admin logged in.
+2025-03-09 00:11:01,170 - User admin logged out.
+2025-03-09 00:11:03,521 - User admin logged in.
+2025-03-09 00:11:04,523 - User admin logged out.
+2025-03-09 00:11:06,775 - User admin logged in.
+2025-03-09 00:11:08,236 - User admin logged out.
+2025-03-09 00:13:46,381 - User admin logged in.
+2025-03-09 00:13:48,284 - User admin logged out.
+2025-03-09 00:15:12,195 - User admin logged in.
+2025-03-09 00:15:15,187 - User admin logged out.
+2025-03-09 00:15:50,100 - User admin logged in.
+2025-03-09 00:18:14,018 - User admin logged in.
+2025-03-09 00:19:37,394 - User admin logged in.
+2025-03-09 00:23:49,632 - User admin logged in.
+2025-03-09 00:24:16,801 - User admin logged in.
+2025-03-09 00:24:40,596 - User admin logged in.
+2025-03-09 00:25:09,606 - User admin logged in.
+2025-03-09 00:27:28,027 - User admin logged in.
+2025-03-09 00:27:39,540 - User admin logged out.
+2025-03-09 00:28:59,912 - User admin logged in.
+2025-03-09 00:30:09,012 - User admin logged in.
+2025-03-09 00:32:04,887 - User admin logged in.
+2025-03-09 00:34:55,366 - User admin logged in.
+2025-03-09 00:38:04,654 - User admin logged in.
+2025-03-09 00:38:28,120 - User admin logged in.
+2025-03-09 00:39:17,339 - User admin logged in.
+2025-03-09 00:40:06,544 - User admin logged in.
+2025-03-09 00:40:37,152 - User admin logged in.
+2025-03-09 00:44:18,688 - User admin logged in.
+2025-03-09 00:45:13,915 - User admin logged in.
+2025-03-09 00:45:31,443 - User admin logged in.
+2025-03-09 00:47:10,413 - User admin logged in.
+2025-03-09 00:51:53,172 - User admin logged in.
+2025-03-09 00:57:41,135 - User admin logged in.
+2025-03-09 01:10:16,666 - User admin logged in.
+2025-03-09 01:11:17,191 - User admin logged in.
+2025-03-09 01:12:15,744 - Failed login attempt: admin
+2025-03-09 01:12:17,993 - Failed login attempt: admin
+2025-03-09 01:12:23,294 - User admin logged in.
+2025-03-09 01:12:52,581 - User admin logged in.
+2025-03-09 01:13:01,781 - User admin logged in.
+2025-03-09 01:21:15,594 - User admin logged in.
+2025-03-09 01:21:17,120 - User admin logged in.
+2025-03-09 01:21:28,602 - User admin logged in.
+2025-03-09 01:28:36,290 - User admin logged in.
+2025-03-09 01:35:34,877 - User admin logged in.
+2025-03-09 01:37:19,994 - User admin logged in.
+2025-03-09 01:43:22,135 - Failed login attempt: mohadmin
+2025-03-09 01:43:32,672 - Failed login attempt: adming
+2025-03-09 01:43:37,313 - User admin logged in.
+2025-03-09 01:43:55,470 - User admin logged in.
+2025-03-09 01:46:39,270 - User admin logged in.
+2025-03-09 03:04:30,792 - User admin logged in.
+2025-03-09 03:07:00,647 - User admin logged in.
+2025-03-09 03:07:00,670 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:09:52,513 - New user registered: abc
+2025-03-09 03:09:59,225 - User abc logged in.
+2025-03-09 03:09:59,239 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:10:08,803 - User abc logged in.
+2025-03-09 03:10:08,813 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:10:30,602 - User admin logged in.
+2025-03-09 03:10:30,629 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:10:51,130 - User admin logged in.
+2025-03-09 03:10:51,159 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:11:07,242 - Failed login attempt: abc
+2025-03-09 03:11:11,758 - Failed login attempt: abc
+2025-03-09 03:11:22,082 - New user registered: abc
+2025-03-09 03:11:33,665 - User abc logged in.
+2025-03-09 03:11:33,674 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:12:58,878 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:13:05,144 - Password recovery email sent to admin.
+2025-03-09 03:18:28,282 - User admin logged in.
+2025-03-09 03:18:28,331 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:24:49,441 - User admin logged in.
+2025-03-09 03:24:49,460 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:25:12,368 - User admin changed their password.
+2025-03-09 03:25:22,029 - Failed login attempt: admin
+2025-03-09 03:25:28,055 - User admin logged in.
+2025-03-09 03:25:28,061 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:25:48,023 - User admin logged in.
+2025-03-09 03:25:48,046 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:27:06,560 - User admin logged in.
+2025-03-09 03:27:06,574 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:28:32,532 - User admin logged in.
+2025-03-09 03:28:32,575 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:32:48,149 - User admin logged in.
+2025-03-09 03:32:48,172 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:34:26,152 - User admin logged in.
+2025-03-09 03:34:26,177 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:38:41,513 - User admin logged in.
+2025-03-09 03:38:41,540 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:40:29,914 - Failed login attempt: Username
+2025-03-09 03:46:27,315 - Failed login attempt: Username
+2025-03-09 03:46:36,788 - User admin logged in.
+2025-03-09 03:46:36,818 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:48:20,337 - Failed login attempt: 
+2025-03-09 03:48:32,012 - User admin logged in.
+2025-03-09 03:48:32,063 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:48:58,539 - User admin logged in.
+2025-03-09 03:48:58,553 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:51:16,162 - Failed login attempt: Username
+2025-03-09 03:51:22,283 - User admin logged in.
+2025-03-09 03:51:22,317 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:52:00,570 - User admin logged in.
+2025-03-09 03:52:00,592 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 03:54:20,720 - User admin logged in.
+2025-03-09 03:54:20,746 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:02:41,051 - User admin logged in.
+2025-03-09 04:02:41,067 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:03:21,095 - User admin logged in.
+2025-03-09 04:03:21,111 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:05:10,054 - User admin logged in.
+2025-03-09 04:05:10,071 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:05:38,432 - Failed login attempt: 
+2025-03-09 04:05:50,203 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:05:53,097 - Password recovery email sent to admin.
+2025-03-09 04:40:03,549 - User admin logged in.
+2025-03-09 04:40:03,591 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:40:34,325 - User admin logged in.
+2025-03-09 04:40:34,337 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:40:40,847 - Intrusion detected: Suspicious activity detected from IP: 192.168.1.10
+2025-03-09 04:51:43,195 - User admin logged in.
+2025-03-09 04:51:43,217 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-03-09 04:55:35,535 - New user registered: mrizwan
+2025-04-15 08:47:42,321 - Failed login attempt: admin
+2025-04-15 08:47:52,058 - User admin logged in.
+2025-04-15 08:47:52,089 - Failed to send email: [Errno 11001] getaddrinfo failed
+2025-04-15 08:47:58,944 - Intrusion detected: Suspicious activity detected from IP: 192.168.1.10
