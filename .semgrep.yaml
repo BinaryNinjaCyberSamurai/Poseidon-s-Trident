@@ -1,0 +1,132 @@
+# Semgrep rules for Poseidon's Trident
+# Focus: Python security best practices + reliability
+# Run locally: semgrep --config .semgrep.yaml --error --quiet
+
+rules:
+  # 1) Dangerous subprocess: shell=True
+  - id: python.subprocess.shell_true
+    languages: [python]
+    message: Avoid subprocess with shell=True; use list args or shlex.split to prevent shell injection.
+    severity: ERROR
+    pattern: subprocess.$FUNC(..., shell=True, ...)
+    metadata:
+      cwe: ["CWE-78"]
+      references:
+        - https://docs.python.org/3/library/subprocess.html#security-considerations
+
+  # 2) Unsafe YAML load
+  - id: python.yaml.unsafe_load
+    languages: [python]
+    message: Use yaml.safe_load instead of yaml.load to avoid arbitrary code execution.
+    severity: ERROR
+    patterns:
+      - pattern: yaml.load($DATA)
+      - pattern-not: yaml.safe_load($DATA)
+    metadata:
+      cwe: ["CWE-20", "CWE-502"]
+      references:
+        - https://pyyaml.org/wiki/PyYAMLDocumentation
+
+  # 3) Requests without timeout
+  - id: python.requests.no_timeout
+    languages: [python]
+    message: HTTP requests should set a timeout to avoid hangs and resource exhaustion.
+    severity: WARNING
+    patterns:
+      - pattern-either:
+        - pattern: requests.get($URL, ...)
+        - pattern: requests.post($URL, ...)
+        - pattern: requests.put($URL, ...)
+        - pattern: requests.delete($URL, ...)
+      - pattern-not: $REQ(..., timeout=$T)
+    metadata:
+      references:
+        - https://requests.readthedocs.io/en/latest/user/advanced/#timeouts
+
+  # 4) Weak cryptographic hash
+  - id: python.crypto.weak_hash
+    languages: [python]
+    message: Avoid MD5/SHA1 for security-sensitive contexts; use SHA-256 or stronger.
+    severity: WARNING
+    pattern-either:
+      - pattern: hashlib.md5($X)
+      - pattern: hashlib.sha1($X)
+    metadata:
+      cwe: ["CWE-327"]
+      references:
+        - https://csrc.nist.gov/publications/detail/fips/180/4/final
+
+  # 5) Insecure random for secrets
+  - id: python.crypto.insecure_random
+    languages: [python]
+    message: Do not use random for secrets; use secrets or os.urandom.
+    severity: WARNING
+    pattern-either:
+      - pattern: random.random()
+      - pattern: random.randrange($X)
+      - pattern: random.randint($A, $B)
+    metadata:
+      cwe: ["CWE-330"]
+      references:
+        - https://docs.python.org/3/library/secrets.html
+
+  # 6) Bare except
+  - id: python.reliability.bare_except
+    languages: [python]
+    message: Avoid bare except; catch specific exceptions to prevent masking errors.
+    severity: WARNING
+    pattern: |
+      try:
+        ...
+      except:
+        ...
+    metadata:
+      references:
+        - https://docs.python.org/3/tutorial/errors.html
+
+  # 7) Disable SSL verification
+  - id: python.requests.verify_false
+    languages: [python]
+    message: Avoid verify=False in requests; use proper certificates or CA bundles.
+    severity: ERROR
+    pattern: $REQ(..., verify=False, ...)
+    metadata:
+      cwe: ["CWE-295"]
+      references:
+        - https://requests.readthedocs.io/en/latest/user/advanced/#ssl-cert-verification
+
+  # 8) Pickle load from untrusted input
+  - id: python.pickle.untrusted_load
+    languages: [python]
+    message: Avoid pickle.load on untrusted data; use safer formats (json) or signed pickle.
+    severity: ERROR
+    pattern-either:
+      - pattern: pickle.load($F)
+      - pattern: pickle.loads($DATA)
+    metadata:
+      cwe: ["CWE-502"]
+
+  # 9) Eval/exec usage
+  - id: python.eval.exec_usage
+    languages: [python]
+    message: Avoid eval/exec; use safer parsing or explicit dispatch.
+    severity: ERROR
+    pattern-either:
+      - pattern: eval($X)
+      - pattern: exec($X)
+    metadata:
+      cwe: ["CWE-95"]
+
+  # 10) Hardcoded credentials (simple heuristic)
+  - id: python.secrets.hardcoded
+    languages: [python]
+    message: Possible hardcoded secret detected; move to secure storage (env/secret manager).
+    severity: WARNING
+    patterns:
+      - pattern-either:
+        - pattern: $VAR = "AKIA$AWS"
+        - pattern: $VAR = "aws_secret_access_key"
+        - pattern: $VAR = "password"
+        - pattern: $VAR = "token"
+    metadata:
+      cwe: ["CWE-798"]
