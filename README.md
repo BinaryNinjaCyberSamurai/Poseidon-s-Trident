@@ -53,6 +53,24 @@ This will run the threat detection mode on the target IP address.
 
 You can see the results of the analysis in the terminal or in the log file
 
+### Protection Mode
+```bash
+python main.py --mode protection --config config.yaml
+python main.py --mode response --incident incident.json
+
+---
+
+## Architecture Diagram (`docs/architecture.md`)
+```md
+# Architecture
+
+```mermaid
+flowchart TD
+    A --> Input Traffic --> B[Detection Engine]
+    B --> C[Protection Module]
+    C --> D[Response Handler]
+    D --> E[Logs/Alerts]
+
 ## Features
 
 **Poseidon's Trident** offers a comprehensive solution for cybersecurity, with the following features:
@@ -86,7 +104,37 @@ We welcome contributions from anyone who is interested in improving **Poseidon's
 4. Commit and push your changes to your branch.
 5. Create a pull request and describe your changes.
 
+---
+
+## Setup
+```bash
+git clone https://github.com/BinaryNinjaCyberSamurai/Poseidon-s-Trident.git
+cd Poseidon-s-Trident
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
 Please follow the coding standards and conventions used in the project. Please also respect the code of conduct and the license of the project. For more details, please see the [CONTRIBUTING.md](https://github.com/BinaryNinjaCyberSamurai/Poseidon-s-Trident/blob/main/CONTRIBUTING.md) file.
+
+Pre‑commit Hooks (`.pre-commit-config.yaml`)
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
 
 ## License
 
