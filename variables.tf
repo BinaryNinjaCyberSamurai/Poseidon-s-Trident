@@ -1,6 +1,7 @@
 variable "region" {
-  description = "The region to deploy the resources"
-  default     = "us-west-2"
+  description = "AWS region to deploy resources"
+  type        = string
+  default     = "us-east-1"
 }
 
 variable "instance_type" {
