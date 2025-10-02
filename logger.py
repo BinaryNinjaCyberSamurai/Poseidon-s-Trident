@@ -1,3 +1,18 @@
+import logging
+import logging.config
+import yaml
+from pathlib import Path
+
+def setup_logging(config_path="logging_config.yaml"):
+    if Path(config_path).exists():
+        with open(config_path, "r") as f:
+            config = yaml.safe_load(f)
+        logging.config.dictConfig(config)
+    else:
+        logging.basicConfig(level=logging.INFO)
+
+logger = logging.getLogger("poseidon")
+
 class Logger:
     def __init__(self):
         # Initialize an empty list to store log messages
