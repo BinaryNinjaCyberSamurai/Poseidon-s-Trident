@@ -130,3 +130,20 @@ rules:
         - pattern: $VAR = "token"
     metadata:
       cwe: ["CWE-798"]
+
+  - id: detect-hardcoded-secrets
+    patterns:
+      - pattern: |
+          $SECRET = "...secret..."
+    message: "Possible hardcoded secret detected. Use environment variables or secret managers instead."
+    severity: ERROR
+    languages: [python]
+
+  - id: unsafe-subprocess-usage
+    patterns:
+      - pattern: subprocess.Popen(...)
+      - pattern: subprocess.call(...)
+      - pattern: subprocess.run(..., shell=True, ...)
+    message: "Unsafe subprocess usage detected. Avoid shell=True or unvalidated input."
+    severity: ERROR
+    languages: [python]      
